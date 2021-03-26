@@ -207,10 +207,21 @@ int main(int argc, char** argv)
         exit(1);
     }
     clear_data();
+    double start = wtime();
     for (i = 0; i < 2048; i++) {
         one_step();
     }
+    double end = wtime();
     free_data();
+
+    double elapsed = end - start;
+
+
+    // Ver como calcular los STEPS y eso para sacar los GFLOPS
+    // double operations = STEPS * (2.0 * N * N * N + N * N);
+    // double gflops = operations / (1000.0 * 1000.0 * 1000.0 * elapsed);
+
+    fprintf(stdout, "Time elapsed: %g\n", elapsed);
 
     exit(0);
 }
