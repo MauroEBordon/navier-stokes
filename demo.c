@@ -245,7 +245,7 @@ static void react(float* d, float* u, float* v)
   ----------------------------------------------------------------------
 */
 
-static void key_func(unsigned char key, int x, int y)
+static void key_func(unsigned char key)
 {
     switch (key) {
     case 'c':
